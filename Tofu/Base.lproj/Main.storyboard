@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nkx-Kv-qqz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nkx-Kv-qqz">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -561,11 +560,44 @@
             </objects>
             <point key="canvasLocation" x="3076" y="862"/>
         </scene>
+        <!--Authentication View Controller-->
+        <scene sceneID="LVD-os-JfT">
+            <objects>
+                <viewController id="tyL-em-vyc" customClass="AuthenticationViewController" customModule="Tofu" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4r1-tz-nI3"/>
+                        <viewControllerLayoutGuide type="bottom" id="kzz-U7-r8c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LKn-2Y-lhh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="App_logo" translatesAutoresizingMaskIntoConstraints="NO" id="GI3-sc-3TY">
+                                <rect key="frame" x="67" y="131" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGw-bh-Uqu">
+                                <rect key="frame" x="137" y="385" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="identyBtn" image="ic_fingerprint"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="identyBtn" destination="WGw-bh-Uqu" id="Hte-bC-aBt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ISI-GH-7R4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1698" y="458"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="9ta-rc-HC8">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nkx-Kv-qqz" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="xoK-K2-CcJ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="8ap-TA-U0q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -740,4 +772,8 @@
             <point key="canvasLocation" x="1262" y="96"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="App_logo" width="424" height="429"/>
+        <image name="ic_fingerprint" width="512" height="512"/>
+    </resources>
 </document>
